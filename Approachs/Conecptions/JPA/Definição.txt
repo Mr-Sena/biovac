@@ -1,0 +1,8 @@
+		Java Persistence API (JPA), solução de Mapeamento Objeto-Relacional padrão da plataforma Java EE.
+
+Pelos conceitos descritos anteriormente podemos notar que o modelo relacional e o modelo orientado a objetos são incompatíveis entre si. Deste modo, para que exista a comunicação entre eles é necessário um mecanismo intermediador, o ORM (Object-Relational Mapping). Este mecanismo provê a conversão das informações existentes em um modelo de dados relacional para o orientado a objetos e vice–versa. Esta conversão é possível através do mapeamento ORM, que descreve a correspondência entres esses dois modelos.
+
+
+
+		Hibernate
+O Hibernate é um framework ORM (Object/Relational Mapping), e como tal tem a função de mapear as tabelas de um banco de dados relacional para as classes de uma aplicação. A ideia por trás desse tipo de framework é que você possa persistir e consultar dados utilizando apenas classes e objetos Java, minimizando a necessidade de lidar diretamente com SQL.
