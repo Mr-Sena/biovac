@@ -1,10 +1,11 @@
-import { vacina } from "./vacina"
+import { Vacina } from "./Vacina"
 
-export class user {
+
+export class User {
     public id: number
     public nome: string
     public email: string
     public cpf: string
     public birthday: string
-    public vacinacao: vacina[]
+    public vacinacao: Vacina[]
 }

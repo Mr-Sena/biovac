@@ -27,27 +27,27 @@
                 <br>
 
                 <label for="nome" class="pr-3">Nome:</label>
-                <input type="text" name="nome" id="nome" style="background-color: rgba(128, 128, 128, 0.664); width:60%;">
+                <input [(ngModel)]='usuario.nome' type="text" name="nome" id="nome" style="background-color: rgba(128, 128, 128, 0.664); width:60%;">
 
                 <br><br>
 
                 <label for="email" class="pr-3">E-mail:</label>
-                <input type="text" name="email" id="email" style="background-color: rgba(128, 128, 128, 0.664); width:60%;">
+                <input [(ngModel)]='usuario.email' type="text" name="email" id="email" style="background-color: rgba(128, 128, 128, 0.664); width:60%;">
 
                 <br><br>
 
                 <label for="cpf" style="margin-right: 33px;">CPF: </label>
-                <input type="text" name="cpf" id="cpf" style="background-color: rgba(128, 128, 128, 0.664); width:60%;">
+                <input [(ngModel)]='usuario.cpf' type="text" name="cpf" id="cpf" style="background-color: rgba(128, 128, 128, 0.664); width:60%;">
 
                 <br><br><br>
 
                 <label for="birthday" class="pr-5">Data de aniversário: </label>
-                <input type="date" id="birthday" name="birthday" style="background-color: rgba(128, 128, 128, 0.664);">
+                <input [(ngModel)]='usuario.birthday' type="date" id="birthday" name="birthday" style="background-color: rgba(128, 128, 128, 0.664);">
 
                 <br><br><br><br>
 
                 <div class="d-flex justify-content-center">
-                    <button type="submit" class="button-cad mb-4"> Cadastrar</button>
+                    <button type="submit" class="button-cad mb-4" (click)='cadastrar()'> Cadastrar</button>
                 </div>
             </div>
 

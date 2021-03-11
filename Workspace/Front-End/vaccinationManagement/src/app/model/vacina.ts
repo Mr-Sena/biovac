@@ -1,10 +1,11 @@
-import { user } from "./user"
+import { User } from "./User"
 
-export class vacina {
+
+export class Vacina {
     public id: number
     public name: string
     public dataInput: Date
     public data: string
-    public UserModel: user
+    public UserModel: User
 
 }
