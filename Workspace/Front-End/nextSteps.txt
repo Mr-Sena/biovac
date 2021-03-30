@@ -1,0 +1,7 @@
+Deixar as bordas do formulário arredondada;
+Colocar umas margens para as labels dos inputs e
+redimensionar a frame da aplicação de vacínas
+
+Colocar algumas restrições indicando obrigatoriedade em algum campo como o email do usuário ou o seu id
+
+Porém para associar o ID é necessario vincular um método get no back

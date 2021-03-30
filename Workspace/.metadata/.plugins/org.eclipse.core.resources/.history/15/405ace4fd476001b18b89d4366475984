@@ -1,9 +1,0 @@
-package com.zup.orangeTalent.repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.zup.orangeTalent.model.VacModel;
-
-public interface VacRepository extends JpaRepository<VacModel, Long> {
-
-}

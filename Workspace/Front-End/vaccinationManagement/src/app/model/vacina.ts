@@ -6,6 +6,7 @@ export class Vacina {
     public name: string
     public dataInput: Date
     public data: string
-    public UserModel: User
+    public usuario: User
+    public emailUser: string
 
 }

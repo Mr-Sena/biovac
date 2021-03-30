@@ -23,28 +23,35 @@
         <div class="col-md-4 mb-4">
 
             <p class="d-flex justify-content-center" style="font-size: 25pt; color: white;"><b>CADASTRAR USUÁRIO</b></p>
+
             <div class="div" style="background-color: rgba(255, 255, 255, 0.41);">
                 <br>
 
                 <label for="nome" class="pr-3">Nome:</label>
-                <input [(ngModel)]='usuario.nome' type="text" name="nome" id="nome" style="background-color: rgba(128, 128, 128, 0.664); width:60%;">
+                <input [(ngModel)]='usuario.nome' type="text" name="nome" id="nome" style="background-color: rgba(128, 128, 128, 0.664); width:60%;" (input)='verificaNome($event)'>
 
                 <br><br>
 
+
+
                 <label for="email" class="pr-3">E-mail:</label>
-                <input [(ngModel)]='usuario.email' type="text" name="email" id="email" style="background-color: rgba(128, 128, 128, 0.664); width:60%;">
+                <input [(ngModel)]='usuario.email' type="text" name="email" id="email" style="background-color: rgba(128, 128, 128, 0.664); width:60%;" (input)='verificaEmail($event)'>
+
+
 
                 <br><br>
 
                 <label for="cpf" style="margin-right: 33px;">CPF: </label>
-                <input [(ngModel)]='usuario.cpf' type="text" name="cpf" id="cpf" style="background-color: rgba(128, 128, 128, 0.664); width:60%;">
-
-                <br><br><br>
-
-                <label for="birthday" class="pr-5">Data de aniversário: </label>
-                <input [(ngModel)]='usuario.birthday' type="date" id="birthday" name="birthday" style="background-color: rgba(128, 128, 128, 0.664);">
+                <input [(ngModel)]='usuario.cpf' type="text" name="cpf" id="cpf" style="background-color: rgba(128, 128, 128, 0.664); width:60%;" (input)='verificaCpf($event)'>
 
                 <br><br><br><br>
+
+                <label for="birthday" class="pr-5">Data de aniversário: </label>
+                <input [(ngModel)]='usuario.birthday' type="date" id="birthday" name="birthday" style="background-color: rgba(128, 128, 128, 0.664);" (input)='verificaData($event)'>
+
+                <br><br>
+                <p class="text-danger"> <b> {{verifica}} </b> </p>
+                <br>
 
                 <div class="d-flex justify-content-center">
                     <button type="submit" class="button-cad mb-4" (click)='cadastrar()'> Cadastrar</button>
@@ -60,8 +67,38 @@
 
             <p class="d-flex justify-content-center" style="font-size: 25pt;"><b>APLICAÇÃO DA VACÍNA</b></p>
             <div class="div" style="background-color: rgba(255, 255, 255, 0.41);">
-                <br><br> Formulário...
+                <br>
+                <label class="pr-3" for="nomeVacina">Nome da vacina:</label>
+                <input [(ngModel)]='vacinacao.name' type="text" id="nomeVacina" name="nomeVacina" style="background-color: rgba(128, 128, 128, 0.664); width:60%;">
+
                 <br><br>
+
+                <label class="pr-3" for="emailUser">E-mail do paciente:</label>
+                <input [(ngModel)]='vacinacao.emailUser' type="text" id="emailUser" name="emailUser" style="background-color: rgba(128, 128, 128, 0.664); width:55%;">
+                <!-- Para usar utilizar o campo abaixo é necessário ter o acesso no metódo GET no back End
+                <label class="pr-4" for="id">Id do paciente:</label>
+                <select style="background-color: rgba(128, 128, 128, 0.664);" name="paciente" id="paciente">
+                    <option *ngFor='let ids of identificadores' value="{{ids}}">
+                    {{ids}}
+                    </option>
+                </select>
+                
+                Não será possível utilizar o estilo de seleção acima porque o back não tem o Get, somente POST-->
+
+                <br><br>
+                <br><br>
+
+                <label for="momento" class="mt-2 pr-5">Data da vacinação: </label>
+                <input [(ngModel)]='vacinacao.data' type="date" id="momento" name="momento" style="background-color: rgba(128, 128, 128, 0.664);">
+
+
+                <br><br><br>
+                <br><br><br>
+
+
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="button-cad mb-4" (click)='vacinar()'> Cadastrar</button>
+                </div>
             </div>
 
         </div>
@@ -73,5 +110,5 @@
 </div>
 
 <footer class="d-flex justify-content-center" style="background-color: #000000c4;">
-    <b style="font-size: 11pt; color: white;">© 2021 Copyright: João Pedro, todos os direitos reservados.</b>
+    <b style="font-size: 11pt; color: white;"><a style="color: white; text-decoration: none;" href="https://github.com/Mr-Sena" target="_blank">© 2021 Copyright: João Pedro, todos os direitos reservados.</a></b>
 </footer>
